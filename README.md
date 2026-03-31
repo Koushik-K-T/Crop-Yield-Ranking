@@ -62,3 +62,5 @@ Quick Sort is 2.0x faster
 
 ## Author
 Koushik-K-T
+Shauryaman Singh
+Sanjay Priesh
