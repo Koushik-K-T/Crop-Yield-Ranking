@@ -11,15 +11,15 @@ public class Main {
         System.out.println("CROP YIELD PRODUCTION RANKING SYSTEM");
         System.out.println("========================================\n");
 
-        // Get number of fields
+        // Get the number of fields
         System.out.println("Enter number of fields: ");
         int numFields = scanner.nextInt();
         scanner.nextLine();
 
-        // Create array to store fields
+        // Storing Fields
         Field[] fields = new Field[numFields];
 
-        // Input field data
+        // Input for Field Data
         System.out.println("\nEnter field details:");
         for (int i = 0; i < numFields; i++) {
             System.out.print("Field " + (i + 1) + " name: ");
@@ -35,7 +35,7 @@ public class Main {
             fields[i] = new Field(name, crop, yield);
         }
 
-        // Create copies for sorting
+        // Sorting Copies
         Field[] bubbleSortData = PerformanceAnalyzer.copyArray(fields);
         Field[] quickSortData = PerformanceAnalyzer.copyArray(fields);
 
@@ -43,11 +43,11 @@ public class Main {
         System.out.println("SORTING IN PROGRESS...");
         System.out.println("========================================\n");
 
-        // Measure sorting times
+        // Time Measurement
         long bubbleTime = PerformanceAnalyzer.measureBubbleSort(bubbleSortData);
         long quickTime = PerformanceAnalyzer.measureQuickSort(quickSortData);
 
-        // Display results
+        // Output
         System.out.println("CROP YIELD RANKING (Highest to Lowest):");
         System.out.println("-----------------------------------------");
         System.out.printf("%-4s | %-10s | %-12s | %s\n",
